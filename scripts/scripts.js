@@ -12,6 +12,7 @@ You are encouraged to use the provided naming convention for ease of review.
 // INSERT YOUR CODE HERE
 
 var modelName = document.getElementById("model-text");
+var duration;
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -37,7 +38,7 @@ function recalculate() {
       costLabel = String(parseFloat(duration) * 213);
     }
 
-    total = parseFloat(costLabel);
+    var total = parseFloat(costLabel);
     document.getElementById("calculated-cost").innerText = total;
 
   }
@@ -60,7 +61,7 @@ function recalculate() {
 //{
 //}
 
-modelButton = document.getElementById("model-button");
+var modelButton = document.getElementById("model-button");
 modelName = document.getElementById("model-text").innerText;
 
 function changeModel() {
@@ -96,11 +97,11 @@ modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 
-durationButton = document.getElementById("duration-button");
+var durationButton = document.getElementById("duration-button");
 
 function changeDuration() {
 
-    userInput = window.prompt("What is the duration?");
+    var userInput = window.prompt("What is the duration?");
     duration = parseFloat(userInput);
     document.getElementById("duration-text").innerText = duration;
 
@@ -108,4 +109,4 @@ function changeDuration() {
 
 }
 
-durationButton.addEventListener("click", changeDuration)
+durationButton.addEventListener("click", changeDuration);
